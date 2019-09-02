@@ -20,10 +20,10 @@
         if($new_comment && $new_comment->save()) {
 
             redirect("photo.php?id={$photo->id}");
-        } else {
-            $message = "There wasa a problem saving your comment";
+            } else {
+                $message = "There wasa a problem saving your comment";
 
-        } 
+            } 
         } else {
             $author = "";
             $body = "";
