@@ -17,7 +17,7 @@
             
                 <div class="col-xs-6 col-md-3">
 
-                    <a href="" class="thumbnail">
+                    <a href="photo.php?id=<?php echo $photo->id ?>" class="thumbnail">
                         <img class="home_page_photo" src="admin/<?php echo $photo->picture_path(); ?>" alt="">
                     
                     </a>
