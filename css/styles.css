@@ -1,5 +1,17 @@
 .home_page_photo {
-    width: 500px!important;
-    height: 200!important;
+    width: 200px!important;
+    height: 150px!important;
 }
+
+.pager .active a {
+    background-color: blue!important;
+    color: #fff!important;
+}
+
+.pager a:hover {
+    background-color: blue;
+    color: #fff;
+}
+
+
 
