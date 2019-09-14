@@ -37,6 +37,21 @@
 
                 <?php endforeach; ?>
                 </div>
+
+                <div class="row">
+                    <ul class="pager">
+                        <?php 
+                            if($pagination->page_total() > 1) {
+                                if($pagination->has_next()) {
+                                    echo "<li class='next'><a href='next'>Next</a></li>";
+                                }
+                            }
+                        ?>
+                        
+                        <li class='previous'><a href='previous'>Previous</a></li>
+                    </ul>
+
+                </div>
     
             
           
