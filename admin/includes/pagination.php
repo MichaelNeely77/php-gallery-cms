@@ -30,7 +30,7 @@ class Pagination {
     }
 
     public function has_next() {
-        return $this->next() <= $this->page_total ? true : false;
+        return $this->next() <= $this->page_total() ? true : false;
     }
 
     public function offset() {

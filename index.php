@@ -43,12 +43,28 @@
                         <?php 
                             if($pagination->page_total() > 1) {
                                 if($pagination->has_next()) {
-                                    echo "<li class='next'><a href='next'>Next</a></li>";
+                                    echo "<li class='next'><a href='index.php?page={$pagination->next()}'>Next</a></li>";
                                 }
+                            for($i=1; $i<= $pagination->page_total(); $i++) {
+                                if($i == $pagination->current_page) {
+                                    echo "<li class='active'><a href='index.php?page={$i}'>{$i}</a></li>";
+                                } else {
+                                    echo "<li><a href='index.php?page={$i}'>{$i}</a></li>";
+                                }
+                            }
+                            
+
+
+                            
+
+                                if($pagination->has_previous()) {
+                                    echo "<li class='previous'><a href='index.php?page={$pagination->previous()}'>Previous</a></li></li>";
+                                }
+
                             }
                         ?>
                         
-                        <li class='previous'><a href='previous'>Previous</a></li>
+                        
                     </ul>
 
                 </div>
