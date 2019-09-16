@@ -20,7 +20,7 @@ $(document).ready(function() {
         image_href_split = image_src.split("/");
         image_name = image_href_split[image_href_split.length -1];
 
-        alert(image_name);
+
     });
 
     
@@ -33,7 +33,7 @@ $(document).ready(function() {
             type: "POST",
             success: function(data) {
                 if(!data.error) {
-                    
+                    location.reload(true);
                 }
             }
         });
