@@ -12,6 +12,7 @@ class Session {
         $this->visitor_count();
         $this->check_the_login();
         $this->check_message();
+        $this->message();
     }
 
     public function message($msg="") {
@@ -24,6 +25,7 @@ class Session {
 
     private function check_message() {
         if(isset($_SESSION['message'])) {
+            $this->message = $_SESSION['message'];
             unset($_SESSION['message']);
         } else {
             $this->message = "";

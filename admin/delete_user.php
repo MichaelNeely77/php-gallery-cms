@@ -14,7 +14,9 @@
     if($user) {
 
         $user->delete();
+        $session->message("The user {$user->username} has been deleted");
         redirect("users.php");
+
 
 
     } else {
