@@ -14,6 +14,7 @@
     if($photo) {
 
         $photo->delete_photo();
+        $session->message("The photo {$photo->filename} has been updated");
         redirect("../photos.php");
 
 

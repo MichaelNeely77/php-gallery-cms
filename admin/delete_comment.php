@@ -14,6 +14,7 @@
     if($comment) {
 
         $comment->delete();
+        $session->message("The comment with {$comment->id} has been updated");
         redirect("comments.php");
 
 

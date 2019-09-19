@@ -14,6 +14,7 @@
     if($comment) {
 
         $comment->delete();
+        $session->message("The comment for photo {$photo->id} has been updated");
         redirect("comments.php");
 
 
