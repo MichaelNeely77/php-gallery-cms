@@ -20,7 +20,9 @@
             $user->set_file($_FILES['user_image']);
 
             $user->upload_photo();
+            $session->message("The user {$user->username} has been added");
             $user->save();
+            redirect("users.php");
         }
 
         // if($user) {
@@ -62,7 +64,7 @@
             <div class="row">
                 <div class="col-lg-6 col-md-offset-3">
                     <h1 class="page-header">
-                        users
+                        Users
                         <small>Subheading</small>
                     </h1>
 
