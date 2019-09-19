@@ -9,6 +9,8 @@ $(document).ready(function() {
     var photo_id;
 
 
+
+
     $(".modal_thumbnails").click(function() {
         $("#set_user_image").prop('disabled', false);
 
@@ -59,6 +61,15 @@ $.ajax({
         });
 
     });
+
+
+
+        /* Edit Photo sidebar */
+
+        $(".info-box-header").click(function(){
+            $(".inside").slideToggle("fast");
+            $("#toggle").toggleClass("glyphicon glyphicon-menu-down glyphicon glyphicon-menu-up");
+        });
 
 
 
