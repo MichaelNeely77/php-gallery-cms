@@ -5,10 +5,10 @@
 
     $message = "";
 
-    if(isset($_POST['submit'])) {
+    if(isset($_FILES['file'])) {
         $photo = new Photo();
         $photo->title = $_POST['title'];
-        $photo->set_file($_FILES['file_upload']);
+        $photo->set_file($_FILES['file']);
 
         if($photo->save()) {
             $message = "Photo uploaded successfully.";
@@ -54,7 +54,7 @@
                             <input type="text" name="title" class="form-control">
                         </div>
                         <div class="form-group">
-                            <input type="file" name="file_upload">
+                            <input type="file" name="file">
                         </div>
                             <input type="submit" name="submit">
 
@@ -64,7 +64,7 @@
                     <!-- End of Row -->
                     <div class="row">
                         <div class="col-lg-12">
-                            <form action="upload" class="dropzone"></form>
+                            <form action="upload.php" class="dropzone"></form>
                         </div>
                     </div>
 
