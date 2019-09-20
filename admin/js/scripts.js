@@ -71,6 +71,11 @@ $.ajax({
             $("#toggle").toggleClass("glyphicon glyphicon-menu-down glyphicon glyphicon-menu-up");
         });
 
+        /* Delete function for  */
+
+        $(".delete_link").click(function() {
+            return confirm ("Are you sure you want to delte this photo?");
+        });
 
 
     tinymce.init({selector:'textarea'});
